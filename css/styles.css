@@ -17,6 +17,8 @@ body {
   text-align: left;
   line-height: 1.5;
   font-weight: 300;
+
+  border: 2px solid #000;
 }
 
 html {
@@ -29,6 +31,7 @@ html {
   background: linear-gradient(294.28deg, #c8dce6 0%, #b6ccda 100%);
   border-radius: 0 0 30px 30px;
   margin: 0;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -63,17 +66,25 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--2x2 {
     display: grid;
-    grid-template-columns: 68rem 48.9rem;
+    grid-template-columns: 1fr 1fr;
   }
 
   .grid--2x2 {
-    margin-top: 4rem;
+    margin-top: 5rem;
+  }
+
+  .grid--1x2 {
+    grid-template-columns: 30vw 10vw;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .grid--2x2 {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 60% 40%;
+  }
+
+  .grid--1x2 {
+    grid-template-columns: 25vw 10vw;
   }
 }
 
@@ -108,7 +119,7 @@ a {
   }
 
   .desktop-nav-anchors a {
-    margin: 4.5rem;
+    margin: 1rem;
     color: var(--color-white);
     font-weight: 400;
     font-size: 1.8rem;
@@ -153,7 +164,7 @@ a {
 }
 .heading1 {
   font-weight: 900;
-  margin: 7rem 0 0 0;
+  margin: 4rem 0 0 0;
 }
 .heading2 {
   margin-top: 0;
@@ -163,7 +174,12 @@ a {
 
 @media screen and (min-width: 1024px) {
   .heading {
-    font-size: 3rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .heading {
+    font-size: 2.5rem;
   }
 }
 
@@ -194,10 +210,8 @@ a {
 
 @media screen and (min-width: 1024px) {
   .btn {
-    height: 7rem;
-    width: 25rem;
-    margin-top: 3rem;
-    padding: 2rem 6vw;
+    margin-top: 2rem;
+    padding: 1.5rem 5vw;
   }
 }
 
@@ -293,7 +307,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 2rem;
   }
 
   .watch-showcase img {
